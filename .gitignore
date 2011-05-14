@@ -3,6 +3,7 @@ doc
 log
 pkg
 example/doc
+example/.yardoc
 site/docs
 site/readme.html
 work/sandbox
