@@ -3,14 +3,20 @@
   <title>Yardbird</title>
   <link rel="icon" type="image/gif" href="assets/cardinal.gif" />
   <style>
-    a { text-decoration: none; }
+    body { margin: 0; padding: 0; font-family: sans-serif; }
+    a { text-decoration: none; font-size: 0.9em; }
     a:hover { text-decoration: underline; }
     li p { margin: 0px; padding: 2px; }
     pre { padding: 10px; }
 
-    #header { margin: 60px auto; width: 730px; border: 1px solid #ccc; padding: 20px 40px; }
-    #header h1 { font-size: 50px; color: #9999FF; }
+    .page { margin: 0 auto; width: 730px; }
+
+    #header { border-bottom: 1px solid #ccc; padding: 20px; }
+    #header h1 { font-size: 40px; color: #4499FF; font-family: sans-serif; padding: 0; margin: 0; }
+    #header h2 { font-size: 12px; color: #ccc; font-family: sans-serif; margin: 0; padding: 0; }
     #header p { border: 1px solid #333; border-radius: 10px; width: 150px; padding: 20px; margin: 30px 0; }
+    #header a { background-color: yellow; border: 1px solid #ccc; color: #555; padding: 5px; margin: 0 10px 0 0; }
+
     #readme { margin: 60px auto; width: 730px; color: #333; }
     #footer { margin: 60px auto; width: 730px; font-size: 0.8em; color: #777; }
     #footer .copyright { margin-top: 20px; }
@@ -33,14 +39,20 @@
 </head>
 <body>
   <div id="header">
-    <img src="assets/cardinal.gif" align="right"/>
-    <h1>YARDBIRD</h1>
-    <a href="docs/api">RubyDoc.info</a><br />
-    <a href="http://rubygems.org/gem/yard-bird">Rubygems.org</a><br />
-    <a href="http://github.com/rubyworks/yard-bird">Github.com</a>
-    <p>Write documentation your way.</p>
+    <div class="page">
+      <h1>YARDBIRD</h1>
+      <h2>Write documentation your way.</h2>
+      <br />
+      <a href="docs/api">RubyDoc.info</a> 
+      <a href="http://rubygems.org/gem/yard-bird">Rubygems.org</a>
+      <a href="http://github.com/rubyworks/yard-bird">Github.com</a>
+    </div>
+  </div>
 
-    <button onclick="$('#readme').toggle();">More...</button>
+  <div id="birdframe" class="page">
+    <img src="assets/cardinal.gif" align="right"/>
+    <br />
+    <button onclick="$('#readme').toggle();">Quack here to learn more...</button>
   </div>
 
   <br style="clear: both;" />
