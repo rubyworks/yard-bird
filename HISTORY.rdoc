@@ -1,0 +1,10 @@
+= HISTORY
+
+== 0.1.1 | 2011-05-14
+
+This is the initial release of Yardbird.
+
+Changes:
+
+* Initial release.
+

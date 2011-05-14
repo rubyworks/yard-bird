@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'tomdoc/tomdoc'
+#require 'yard-bird/tomdoc'
+
+# God is /\A.*?\Z/
+When /\A.*?\Z/m do |matchdata, comments|
+  tomdoc = TomDoc::TomDoc.new(comments)
+  tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
+  tomdoc.args.each {|arg| create_tag(:param, "#{arg.name} #{arg.description}") }
+  tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
+  tomdoc.returns.each {|r| create_tag(:return, r.sub(/\AReturns\s+/, '')) }
+  tomdoc.description
+end
+
