@@ -1,7 +1,15 @@
-#require 'yard'
-
 module YardBird
 
+  # This is an internal copy of TomDoc class from
+  # the Tomdoc[https://github.com/defunkt/tomdoc] project.
+  #
+  # This class is not actually needed, since one can just install
+  # tomdoc gem for it, but for the time being we'll leave this
+  # available because there is a dependency conflict with tomdoc 0.1.0
+  # and the later version of YARD.
+  #
+  # WARNING: When possible, `gem install tomdoc` and `require tomdoc/tomdoc`
+  # instead of using this.
   module TomDoc
     class InvalidTomDoc < RuntimeError
       # Create new InvalidTomDoc object.

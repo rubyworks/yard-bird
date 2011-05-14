@@ -3,41 +3,58 @@ module YardBird
   #
   class Rules
 
-    #
+    # Create new Rules object.
     def initialize()
       @patterns = {}
       load_rules
       inject_rules
     end
 
+    # Dot-bird filesa are loaded from `.yard/` project directory
+    # and sorted alphabetically. The sorting is useful for controlling
+    # application order when using multiple files --simply number the
+    # files, e.g.
     #
+    #   .yard/01_special.bird
+    #   .yard/02_tomdoc.bird
+    #
+    # In the example the special rules will have precedence over the 
+    # tomdoc rules.
     def load_rules
-      files = Dir[".yard/*.bird"]
+      files = Dir[".yard/*.bird"].sort
       files.each do |file|
         instance_eval(File.read(file), file)
       end
     end
 
+    # Define a new rule.
     #
+    #   pattern - Regexp to match against comment.
+    #   block   - Proc for handling pattern match.
+    #
+    # Returns Proc object, the given block.
     def When(pattern, &block)
       patterns[pattern] = block
     end
 
-    #
+    # Returns Hash of patterns and corresponding procedures.
     def patterns
       @patterns
     end
 
-    #
+    # Rules are applied as YARD processes comments. All rules are applied
+    # in order until all rules have been tried, or a triggered rule returns
+    # a :break symbol, which will short-circuit further rule application.
     def inject_rules
       pats = patterns
       ::YARD::Docstring.class_eval do
         define_method :parse_comments do |comments|
-          result = nil
+          comments = comments.join("\n") if Array === comments
+          result   = nil
           pats.each do |pattern, block|
-            comments = comments.join("\n") if Array === comments
             if md = pattern.match(comments)
-              r = instance_exec(md, comments, &block) #block.call(md)
+              result = instance_exec(md, comments, &block) #block.call(md)
+              break if result == :break
             end
           end
           comments.to_s #r.to_s
