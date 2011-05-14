@@ -7,19 +7,43 @@
     a { text-decoration: none; }
     a:hover { text-decoration: underline; }
     p { border: 1px solid #333; border-radius: 10px; width: 150px; padding: 20px; margin: 30px 0; }
-    #main { margin: 60px auto; width: 700px; border: 1px solid #ccc; padding: 20px 40px; }
+
+    #header { margin: 60px auto; width: 700px; border: 1px solid #ccc; padding: 20px 40px; }
+    #readme { margin: 60px auto; width: 700px; color: #333; }
     #footer { margin: 60px auto; width: 700px; font-size: 0.8em; color: #777; }
     #footer .copyright { margin-top: 20px; }
   </style>
+
+  <script language="javascript" type="text/javascript" src="assets/jquery.js"></SCRIPT>
+  <script language="javascript" type="text/javascript" src="assets/highlight.js"></SCRIPT>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#readme').load('readme.html');
+      $('pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+    });
+  </script>
+
+  <link type="text/css" rel="stylesheet" href="assets/styles/highlight.css" />
 </head>
 <body>
-  <div id="main">
+  <div id="header">
     <img src="assets/cardinal.gif" align="right"/>
     <h1>Yard</br>Bird</h1>
     <a href="docs/api">RubyDoc.info</a><br />
     <a href="http://rubygems.org/gem/yard-bird">Rubygems.org</a><br />
     <a href="http://github.com/rubyworks/yard-bird">Github.com</a>
     <p>Write documentation your way.</p>
+
+    <button onclick="$('#readme').toggle();">More...</button>
+  </div>
+
+  <br style="clear: both;" />
+
+  <div id="readme" style="display: none;">
+    Sorry the README document did not load.
   </div>
 
   <br style="clear: both;" />
