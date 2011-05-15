@@ -8,18 +8,28 @@
     a:hover { text-decoration: underline; }
     li p { margin: 0px; padding: 2px; }
     pre { padding: 10px; }
+    button { border: none; background: transparent; font-size: 1.3em; }
+    button:hover { color: red; }
 
-    .page { margin: 0 auto; width: 730px; }
+    .page { margin: 0 auto; width: 960px; }
 
-    #header { border-bottom: 1px solid #ccc; padding: 20px; }
+    #header { padding: 20px 0 50px 0; background-color: #eee; }
     #header h1 { font-size: 40px; color: #4499FF; font-family: sans-serif; padding: 0; margin: 0; }
-    #header h2 { font-size: 12px; color: #ccc; font-family: sans-serif; margin: 0; padding: 0; }
+    #header h2 { font-size: 13px; color: #777; font-family: sans-serif; margin: -5px 0 0 0; padding: 0 0 0 5px; font-weight: normal; }
     #header p { border: 1px solid #333; border-radius: 10px; width: 150px; padding: 20px; margin: 30px 0; }
-    #header a { background-color: yellow; border: 1px solid #ccc; color: #555; padding: 5px; margin: 0 10px 0 0; }
 
-    #readme { margin: 60px auto; width: 730px; color: #333; }
-    #footer { margin: 60px auto; width: 730px; font-size: 0.8em; color: #777; }
-    #footer .copyright { margin-top: 20px; }
+    #nav a { background-color: yellow; border: 1px solid #ccc; color: #555; padding: 5px 8px; margin: 0 10px 0 0; font-size: 0.8em; }
+
+    .sidenote { float: right; width: 200px; background: #fff; border: 1px solid #ccc; padding: 5px; text-align: center; margin: 10px; }
+
+    #birdframe { background: url(assets/ss8.png) top center no-repeat #e4e4e4; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+
+    #readme { margin: 60px auto; width: 960px; color: #333; }
+
+    #footer { margin: 30px auto; width: 960px; font-size: 0.8em; color: #777; }
+    #footer .ad { margin: 0 auto; width: 730px; }
+
+    #copyright { margin-top: 20px; text-align: center; padding: 5px; }
   </style>
 
   <script language="javascript" type="text/javascript" src="assets/jquery.js"></SCRIPT>
@@ -40,18 +50,31 @@
 <body>
   <div id="header">
     <div class="page">
+      <div class="sidenote">
+        Latest Release: <b>0.1.1</b><br/>
+
+        <a href="docs/api/README.html">README</a>
+      </div>
       <h1>YARDBIRD</h1>
-      <h2>Write documentation your way.</h2>
+      <h2>Write documentation your way!</h2>
       <br />
-      <a href="docs/api">RubyDoc.info</a> 
-      <a href="http://rubygems.org/gem/yard-bird">Rubygems.org</a>
-      <a href="http://github.com/rubyworks/yard-bird">Github.com</a>
+      <div id="nav">
+        <a href="docs/api">API</a> 
+        <a href="http://github.com/rubyworks/yard-bird">Source</a>
+        <a href="http://rubygems.org/gem/yard-bird">Gem</a>
+        <a href="http://googlegroups.com/group/rubyworks-mailinglist">Mail</a>
+      </div>
     </div>
   </div>
 
-  <div id="birdframe" class="page">
-    <img src="assets/cardinal.gif" align="right"/>
-    <br />
+  <div id="birdframe" style="height: 300px">
+    <div class="page" style="text-align: center;">
+      <h1>Teach YARD to Read <i>Your</i> Comments</h1>
+      <img src="assets/cardinal.gif" height="290px" style="margin-left: 500px;" />
+    </div>
+  </div>
+
+  <div class="page" style="padding: 30px 0;">
     <button onclick="$('#readme').toggle();">Quack here to learn more...</button>
   </div>
 
@@ -64,22 +87,24 @@
   <br style="clear: both;" />
 
   <div id="footer">
-    <script type="text/javascript"><!--
-    google_ad_client = "ca-pub-1126154564663472";
-    /* RUBYWORKS 09-10-02 728x90 */
-    google_ad_slot = "0788888658";
-    google_ad_width = 728;
-    google_ad_height = 90;
-    //-->
-    </script>
-    <script type="text/javascript"
-    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-    </script>
-
-    <div class="copyright">
-      Copyright (c) 2011 Thomas Sawyer |
-      <a href="http://www.clipartheaven.com/">Logo (c) Clipart.com</a>
+    <div class="ad">
+      <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-1126154564663472";
+      /* RUBYWORKS 09-10-02 728x90 */
+      google_ad_slot = "0788888658";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      //-->
+      </script>
+      <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
     </div>
+  </div>
+
+  <div id="copyright">
+    Copyright (c) 2011 Thomas Sawyer |
+    <a href="http://www.clipartheaven.com/">Logo (c) Clipart.com</a>
   </div>
 
   <div style="position: absolute; top: 0; right: 0;">
