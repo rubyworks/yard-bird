@@ -1,6 +1,6 @@
 = Yard Bird
 
-"Sing sweet documentation in my ear."
+<i>"Sing sweet documentation in my ear."</i>
 
 
 == Description
@@ -11,9 +11,9 @@ documentation parsing system.
 
 == Resources
 
-home: http://rubyworks.github.com/
-code: http://github.com/rubyworks/
-mail: http://groups.google.com/group/rubyworks-mailinglist
+* home: http://rubyworks.github.com/
+* code: http://github.com/rubyworks/
+* mail: http://groups.google.com/group/rubyworks-mailinglist
 
 
 == Check It Out
@@ -46,6 +46,8 @@ Now we can get even crazier with an implementation of Tomdoc[].
 
 == Legal Bullshit
 
-(c) 2011 Thomas Sawyer
+(MIT License)
 
-Fuck You License
+Copyright (c) 2011 Thomas Sawyer
+
+See NOTICE.rdoc file for more details.
