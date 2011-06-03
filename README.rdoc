@@ -22,14 +22,14 @@ Sound like a chore? Until you see it allows you do this:
 
   # .yard/name.song
 
-  When /^Returns\s+/ do |matchdata, comment|
-    create_tag(:return, matchdata.post_match)
+  When /^Returns\s+(.*?)$/ do |matchdata, comment|
+    create_tag(:return, matchdata[1])
   end
 
 Now, whenever your documentation starts with 'Returns ', the
 remainder of the line will be added to YARD as a :return tag.
 
-Now we can get even crazier with an implementation of Tomdoc[].
+Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc].
 
   require 'tomdoc/tomdoc'
 
@@ -44,7 +44,7 @@ Now we can get even crazier with an implementation of Tomdoc[].
   end
 
 
-== Legal Bullshit
+== License
 
 (MIT License)
 

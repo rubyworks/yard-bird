@@ -1,0 +1,33 @@
+--- 
+name   : yard-bird
+title  : YARD Bird
+summary: Documentation Your Way!
+contact: trans <transfire@gmail.com>
+created: 2011-05-14
+authors: Thomas Sawyer
+license: Apache 2.0
+
+description:
+  Yardbird is a YARD plugin that allows you, the developer, to customize your
+  documentation parsing system.
+
+requires:
+  - yard
+  - pitstop (build)
+  - qed     (test)
+
+resources:
+  home: http://rubyworks.github.com/yard-bird
+  code: http://github.com/rubyworks/yard-bird
+  docs: http://wiki.github.com/rubyworks/yard-bird/qed
+  wiki: http://wiki.github.com/rubyworks/yard-bird
+  bugs: http://github.com/rubyworks/yard-bird/issues
+  mail: http://groups.google.com/group/rubyworks-mailinglist
+
+repositories:
+  public: git://github.com/rubyworks/yard-bird.git
+
+organization: Rubyworks
+
+copyright: Copyright (c) 2011 Thomas Sawyer
+
