@@ -1,0 +1,6 @@
+--title "YARD-Bird"
+--readme README.md
+--output-dir site/doc
+--private
+lib/**/*.rb -
+[A-Z][A-Z]*
