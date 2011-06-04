@@ -1,5 +1,5 @@
 --title "YARD-Bird"
---readme README.md
+--readme README.rdoc
 --output-dir site/doc
 --private
 lib/**/*.rb -

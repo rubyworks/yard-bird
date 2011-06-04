@@ -5,10 +5,8 @@ gem:
 
 dnote:
   service  : DNote
-  loadpath : ~
   labels   : ~
   output   : ~
-  format   : ~
   active   : true
 
 stats:
@@ -19,19 +17,17 @@ stats:
   output   : ~
   active   : true
 
-rdoc:
-  service : rdoc
-  format  : redfish
-  exclude : [Redfile, Profile, MANIFEST, Version]
-  output  : site/docs/api
-  active  : false
+yard:
+  service  : Yard
+  yardopts : true
+  active   : true
 
 ri:
   service: RI
   include: ~
   exclude: ~
-  output : ri
-  active : true
+  output : .rdoc
+  active : false
 
 qedoc:
   service: custom
@@ -56,9 +52,6 @@ grancher:
   #  - site
   #  - [doc/rdoc, rdoc]
   #  - [doc/qedoc, qedoc]
-
-gemcutter:
-  active: true
 
 email:
   service : Email
