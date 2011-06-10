@@ -32,7 +32,7 @@ dependencies:
   type: :runtime
   version_requirements: *id001
 - !ruby/object:Gem::Dependency 
-  name: pitstop
+  name: qed
   prerelease: false
   requirement: &id002 !ruby/object:Gem::Requirement 
     none: false
@@ -45,20 +45,6 @@ dependencies:
         version: "0"
   type: :development
   version_requirements: *id002
-- !ruby/object:Gem::Dependency 
-  name: qed
-  prerelease: false
-  requirement: &id003 !ruby/object:Gem::Requirement 
-    none: false
-    requirements: 
-    - - ">="
-      - !ruby/object:Gem::Version 
-        hash: 3
-        segments: 
-        - 0
-        version: "0"
-  type: :development
-  version_requirements: *id003
 description: Yardbird is a YARD plugin that allows you, the developer, to customize your documentation parsing system.
 email: transfire@gmail.com
 executables: []
@@ -76,8 +62,6 @@ files:
 - NOTICE.rdoc
 homepage: http://rubyworks.github.com/yard-bird
 licenses: 
-- Apache 2.0
-- Apache 2.0
 - Apache 2.0
 post_install_message: 
 rdoc_options: 
