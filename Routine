@@ -48,19 +48,15 @@ email:
 
 vclog:
   service  : VClog
-  format   : markdown # html
-  type     : rel
-  output   : ~
+  format   : markdown
+  type     : log
+  output   : log
   active   : true
 
 
 # TODO
 
-qedoc:
-  service: custom
-  track  : main
-  document: |
-    puts `qedoc -o site/qed -t "<%= title %>" qed`
+qed:
   active: false
 
 testrb:
