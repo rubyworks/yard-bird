@@ -1,0 +1,7 @@
+#!mast lib test [A-Z][A-Z]*
+lib/yard-bird/rules.rb
+lib/yard-bird/version.rb
+lib/yard-bird.rb
+HISTORY.rdoc
+README.rdoc
+NOTICE.rdoc
