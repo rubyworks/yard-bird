@@ -11,16 +11,16 @@ documentation parsing system.
 
 == Resources
 
-* home: http://rubyworks.github.com/
-* code: http://github.com/rubyworks/
-* mail: http://groups.google.com/group/rubyworks-mailinglist
+* {Homepage}[http://rubyworks.github.com]
+* {Source Code}[http://github.com/rubyworks]
+* {Mainling List}[http://groups.google.com/group/rubyworks-mailinglist]
 
 
 == Check It Out
 
 Sound like a chore? Until you see it allows you do this:
 
-  # .yard/name.song
+  # .yard/example.bird
 
   When /^Returns\s+(.*?)$/ do |matchdata, comment|
     create_tag(:return, matchdata[1])
@@ -33,7 +33,6 @@ Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc]
 
   require 'tomdoc/tomdoc'
 
-  # God is /\A.*?\Z/
   When /\A.*?\Z/m do |matchdata, comment|
     tomdoc = TomDoc::TomDoc.new(comment)
     tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
