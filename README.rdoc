@@ -34,8 +34,8 @@ Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc]
   require 'tomdoc/tomdoc'
 
   # God is /\A.*?\Z/
-  When /\A.*?\Z/m do |matchdata, comments|
-    tomdoc = TomDoc::TomDoc.new(comments)
+  When /\A.*?\Z/m do |matchdata, comment|
+    tomdoc = TomDoc::TomDoc.new(comment)
     tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
     tomdoc.args.each {|arg| create_tag(:param, "#{arg.name} #{arg.description}") }
     tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }

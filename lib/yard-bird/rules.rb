@@ -5,7 +5,7 @@ module YARD
     #
     class Rules
 
-      #
+      # Returns [Rules] 
       def self.load
         new
       end
@@ -27,6 +27,8 @@ module YARD
       #
       # In the example the special rules will have precedence over the 
       # tomdoc rules.
+      #
+      # Returns nothing.
       def load_rules
         files = Dir[".yard/*.bird"].sort
         files.each do |file|
@@ -39,19 +41,19 @@ module YARD
       #   pattern - Regexp to match against comment.
       #   block   - Proc for handling pattern match.
       #
-      # Returns Proc object, the given block.
+      # Returns [Proc] the given block.
       def When(pattern, &block)
         patterns[pattern] = block
       end
 
-      # Returns Hash of patterns and corresponding procedures.
+      # Returns [Hash] patterns mapped to corresponding procedures.
       def patterns
         @patterns
       end
 
       # Rules are applied as YARD processes comments. All rules are applied
       # in order until all rules have been tried, or a triggered rule returns
-      # a :break symbol, which will short-circuit further rule application.
+      # a `:break` symbol, which will short-circuit further rule application.
       def inject_rules
         pats = patterns
         ::YARD::Docstring.class_eval do

@@ -1,7 +1,8 @@
 ---
 gem:
-  service: Gem
-  active : true
+  service  : Gem
+  autospec : true
+  active   : true
 
 dnote:
   service  : DNote
