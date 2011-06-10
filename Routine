@@ -13,7 +13,6 @@ dnote:
 stats:
   service  : Stats
   title    : ~
-  loadpath : ~
   exclude  : ~
   output   : ~
   active   : true
@@ -23,19 +22,20 @@ yard:
   yardopts : true
   active   : true
 
-ri:
-  service: RI
-  include: ~
-  exclude: ~
-  output : .rdoc
-  active : false
-
 qedoc:
   service: custom
-  cycle: main
+  track  : main
   document: |
-    puts `qedoc -o site/docs/qed -t "<%= title %>" qed`
+    puts `qedoc -o site/qed -t "<%= title %>" qed`
   active: false
+
+grancher:
+  service: Grancher
+  active: true
+  #sitemap:
+  #  - site
+  #  - [doc/rdoc, doc]
+  #  - [doc/qedoc, qed]
 
 testrb:
   service  : testrb
@@ -46,28 +46,23 @@ testrb:
   live     : false   
   active   : false
 
-grancher:
-  service: Grancher
-  active: true
-  #sitemap:
-  #  - site
-  #  - [doc/rdoc, rdoc]
-  #  - [doc/qedoc, qedoc]
-
 email:
   service : Email
   file    : ~
   subject : ~
-  mailto  : ruby-talk@ruby-lang.org
-#  from    : transfire@gmail.com
-#  server  : <%= ENV['EMAIL_SERVER'] %>
-#  port    : <%= ENV['EMAIL_PORT'] %>
-#  account : <%= ENV['EMAIL_ACCOUNT'] %>
-#  domain  : <%= ENV['EMAIL_DOMAIN'] %>
-#  login   : <%= ENV['EMAIL_LOGIN'] %>
-#  secure  : <%= ENV['EMAIL_SECURE'] %>
+  mailto  :
+    - rubyworks-mailingist@googlegroups.com
+    - ruby-talk@ruby-lang.org
+  #from    : transfire@gmail.com
+  #server  : <%= ENV['EMAIL_SERVER'] %>
+  #port    : <%= ENV['EMAIL_PORT'] %>
+  #account : <%= ENV['EMAIL_ACCOUNT'] %>
+  #domain  : <%= ENV['EMAIL_DOMAIN'] %>
+  #login   : <%= ENV['EMAIL_LOGIN'] %>
+  #secure  : <%= ENV['EMAIL_SECURE'] %>
   active  : true
 
+# FIXME
 vclog:
   service  : VClog
   format   : html   # xml, txt

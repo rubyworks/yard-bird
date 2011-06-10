@@ -63,6 +63,8 @@ files:
 homepage: http://rubyworks.github.com/yard-bird
 licenses: 
 - Apache 2.0
+- Apache 2.0
+- Apache 2.0
 post_install_message: 
 rdoc_options: 
 - --title

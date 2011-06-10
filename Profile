@@ -13,7 +13,7 @@ description:
 
 requires:
   - yard
-  - pitstop (build)
+#  - pitstop (build)
   - qed     (test)
 
 resources:
