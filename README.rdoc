@@ -14,6 +14,7 @@ documentation parsing system.
 * {Homepage}[http://rubyworks.github.com]
 * {Source Code}[http://github.com/rubyworks]
 * {Mainling List}[http://groups.google.com/group/rubyworks-mailinglist]
+* {<img src="http://travis-ci.org/rubyworks/yard-bird.png" />}[http://travis-ci.org/rubyworks/yard-bird]
 
 
 == Check It Out
