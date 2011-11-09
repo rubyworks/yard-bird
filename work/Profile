@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__) + '/lib/yard-bird/version.rb'
+
+name    'yard-bird'
+version YARD::Bird::VERSION
+
+title   'YARD Bird'
+summary 'Documentation Your Way!'
+
+authors [
+  'Trans <transfire@gmail.com>'
+]
+
+description \
+  "Yardbird is a YARD plugin that allows you, the developer, to customize " +
+  "your documentation parsing system."
+
+requirements [
+  'yard',
+  'detroit (build)',
+  'qed     (test)'
+]
+
+resources(
+  'home' => 'http://rubyworks.github.com/yard-bird'
+  'code' => 'http://github.com/rubyworks/yard-bird'
+  'docs' => 'http://wiki.github.com/rubyworks/yard-bird/qed'
+  'wiki' => 'http://wiki.github.com/rubyworks/yard-bird'
+  'bugs' => 'http://github.com/rubyworks/yard-bird/issues'
+  'mail' => 'http://groups.google.com/group/rubyworks-mailinglist'
+)
+
+repositories(
+  'upstream' => 'git://github.com/rubyworks/yard-bird.git'
+)
+
+organization 'Rubyworks'
+
+created '2011-05-14'
+
+copyright 'Copyright (c) 2011 Thomas Sawyer'
+
