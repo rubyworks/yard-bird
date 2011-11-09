@@ -47,6 +47,6 @@ Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc]
 
 (MIT License)
 
-Copyright (c) 2011 Thomas Sawyer
+Copyright (c) 2011 Rubyworks
 
 See NOTICE.rdoc file for more details.

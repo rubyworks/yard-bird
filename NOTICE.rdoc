@@ -2,7 +2,7 @@
 
 == YardBird
 
-Copyright (c) 2011 Thomas Sawyer
+Copyright (c) 2011 Rubyworks
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -50,7 +50,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 
-== Tomdoc
+== TomDoc
 
 Copyright (c) 2010 Tom Preston-Werner, Chris Wanstrath
 
