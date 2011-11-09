@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
-
-require 'tomdoc/tomdoc' #'yard-bird/tomdoc'
+require 'tomdoc/tomdoc'
 
 # God is /\A.*?\Z/
 When /\A.*?\Z/m do |matchdata, comment|
 
-  tomdoc = TomDoc::TomDoc.new(comment)
+  # We need to put the comment marker back for TomDoc.
+  raw = comment.each_line.map{ |line| '# ' + line }.join
+
+  tomdoc = TomDoc::TomDoc.new(raw)
 
   tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
 
