@@ -1,7 +1,9 @@
 --title "YARD-Bird"
 --readme README.rdoc
---output-dir site/doc
+--output-dir pages/doc
+--protected
 --private
 --plugin bird
-lib/**/*.rb -
-[A-Z][A-Z]*
+lib 
+-
+[A-Z]*.*

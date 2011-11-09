@@ -1,70 +1,28 @@
 ---
-gem:
-  service  : Gem
-  autospec : true
-  active   : true
-
-dnote:
-  service  : DNote
-  labels   : ~
-  output   : ~
-  active   : true
-
-stats:
-  service  : Stats
-  title    : ~
-  exclude  : ~
-  output   : ~
-  active   : true
-
-yard:
-  service  : Yard
-  yardopts : true
-  active   : true
-
-grancher:
-  service: Grancher
-  active: true
-  #sitemap:
-  #  - site
-  #  - [doc/rdoc, doc]
-  #  - [doc/qedoc, qed]
-
 email:
-  service : Email
-  file    : ~
-  subject : ~
-  mailto  :
+  mailto:
     - rubyworks-mailingist@googlegroups.com
     - ruby-talk@ruby-lang.org
-  #from    : transfire@gmail.com
-  #server  : <%= ENV['EMAIL_SERVER'] %>
-  #port    : <%= ENV['EMAIL_PORT'] %>
-  #account : <%= ENV['EMAIL_ACCOUNT'] %>
-  #domain  : <%= ENV['EMAIL_DOMAIN'] %>
-  #login   : <%= ENV['EMAIL_LOGIN'] %>
-  #secure  : <%= ENV['EMAIL_SECURE'] %>
-  active  : true
+
+gem:
+  active: true
+
+github:
+  gh_pages: pages
+
+minitest:
+  tests    : test/*/test_*.rb
+  loadpath : [lib,test]
+
+yard:
+  active: true
+
+dnote:
+  output: NOTES.rdoc
 
 vclog:
-  service  : VClog
-  format   : markdown
-  type     : log
-  output   : log
-  active   : true
-
-
-# TODO
-
-qed:
+  output:
+    - log/Changes.rdoc
+    - log/History.rdoc
   active: false
-
-testrb:
-  service  : testrb
-  tests    : ~
-  exclude  : ~
-  loadpath : ~
-  requires : ~
-  live     : false   
-  active   : false
 

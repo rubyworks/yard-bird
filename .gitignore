@@ -1,11 +1,8 @@
+.reap/digest
 .yardoc
-.ri
 doc
 log
 pkg
-ri
-example/doc
-example/.yardoc
-site/docs
-site/readme.html
+tmp
+pages
 work/sandbox
