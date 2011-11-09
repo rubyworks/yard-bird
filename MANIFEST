@@ -3,11 +3,12 @@ lib/yard-bird/rules.rb
 lib/yard-bird/version.rb
 lib/yard-bird.rb
 test/helper.rb
-test/system/sample/.yard/tom.bird
+test/system/sample/.yard/yaml.bird
 test/system/sample/lib/example.rb
 test/system/sample/lib/hello_world.rb
 test/system/test_yardoc.rb
 test/unit/test_rules.rb
 HISTORY.rdoc
 README.rdoc
+NOTES.rdoc
 NOTICE.rdoc
