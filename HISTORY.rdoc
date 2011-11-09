@@ -1,5 +1,15 @@
 = RELEASE HISTORY
 
+== 0.1.2 | 2011-11-10
+
+This release simply brings the build configuration
+up to date. Nothing has change functionally.
+
+Changes:
+
+* Modernize build configuration.
+
+
 == 0.1.1 | 2011-06-10
 
 This is the initial release of Yardbird.

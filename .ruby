@@ -36,7 +36,7 @@ revision: 0
 created: '2011-05-14'
 summary: Documentation Your Way!
 title: YARD Bird
-version: 0.1.1
+version: 0.1.2
 name: yard-bird
 description: Yardbird is a YARD plugin that allows you, the developer, to customize
   your documentation parsing system.
