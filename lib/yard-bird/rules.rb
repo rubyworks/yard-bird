@@ -28,7 +28,7 @@ module YARD
       # In the example the special rules will have precedence over the 
       # tomdoc rules.
       #
-      # Returns nothing.
+      # @return Nothing
       def load_rules
         files = Dir[".yard/*.bird"].sort
         files.each do |file|
@@ -41,12 +41,14 @@ module YARD
       #   pattern - Regexp to match against comment.
       #   block   - Proc for handling pattern match.
       #
-      # Returns [Proc] the given block.
+      # @return [Proc] the given block
       def When(pattern, &block)
         patterns[pattern] = block
       end
 
-      # Returns [Hash] patterns mapped to corresponding procedures.
+      # Patterns to apply.
+      #
+      # @Return [Hash] patterns mapped to corresponding procedures
       def patterns
         @patterns
       end

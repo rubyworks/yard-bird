@@ -18,6 +18,7 @@ yard:
   active: true
 
 dnote:
+  title: Developer's Notes
   output: NOTES.rdoc
 
 vclog:
