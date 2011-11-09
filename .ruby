@@ -12,7 +12,11 @@ replacements: []
 alternatives: []
 requirements:
 - name: yard
-- name: qed
+- name: rake
+  groups:
+  - test
+  development: true
+- name: minitest
   groups:
   - test
   development: true

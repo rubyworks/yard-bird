@@ -1,4 +1,5 @@
 ---
 - yard
-- qed    (test)
+- rake     (test)
+- minitest (test)
 
