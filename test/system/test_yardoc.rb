@@ -18,7 +18,7 @@ describe "yard doc" do
 
   it "should generate documentation" do
     Dir.chdir(tmp + '/sample') do
-      success = system "yard doc --plugin yard-bird lib/"
+      success = system "yard doc --plugin bird lib/"
 
       assert(success, "failed to generate yard documentation")
       assert File.directory?('doc')
