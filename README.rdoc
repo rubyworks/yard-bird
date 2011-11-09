@@ -29,7 +29,7 @@ Sound like a chore? Until you see it allows you do this:
 Now, whenever your documentation starts with 'Returns ', the
 remainder of the line will be added to YARD as a :return tag.
 
-Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc].
+Now we can get even crazier a create a simplified implementation of {Tomdoc}[http://tomdoc].
 
   require 'tomdoc/tomdoc'
 
@@ -41,6 +41,9 @@ Now we can get even crazier with a basic implementation of Tomdoc[http://tomdoc]
     tomdoc.returns.each {|r| create_tag(:return, r.sub(/\AReturns\s+/, '')) }
     tomdoc.description
   end
+
+Now it's your turn. You have the _power_*, Yard Bird will singe _Your_ song.
+And YARD will happily spit it out all pretty.
 
 
 == License
