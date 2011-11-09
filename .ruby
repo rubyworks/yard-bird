@@ -28,10 +28,9 @@ repositories:
   name: public
 resources:
   home: http://rubyworks.github.com/yard-bird
-  code: http://github.com/rubyworks/yard-bird
-  docs: http://wiki.github.com/rubyworks/yard-bird/qed
-  wiki: http://wiki.github.com/rubyworks/yard-bird
+  docs: http://rubyworks.github.com/yard-bird/doc
   bugs: http://github.com/rubyworks/yard-bird/issues
+  code: http://github.com/rubyworks/yard-bird
   mail: http://groups.google.com/group/rubyworks-mailinglist
 extra: {}
 load_path:
@@ -42,7 +41,13 @@ summary: Documentation Your Way!
 title: YARD Bird
 version: 0.1.2
 name: yard-bird
-description: Yardbird is a YARD plugin that allows you, the developer, to customize
-  your documentation parsing system.
+description: ! 'Yardbird is a YARD plugin that allows you, the developer, to write
+  documentation
+
+  Your Way. Do you like TomDoc, but wish it were just a tad bit different? You can
+
+  fix that. Have some raddical idea for using ASCII table in your docs? You can do
+
+  that too.'
 organization: Rubyworks
 date: '2011-11-09'

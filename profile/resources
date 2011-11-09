@@ -1,7 +1,6 @@
 ---
 home: http://rubyworks.github.com/yard-bird
-code: http://github.com/rubyworks/yard-bird
-docs: http://wiki.github.com/rubyworks/yard-bird/qed
-wiki: http://wiki.github.com/rubyworks/yard-bird
+docs: http://rubyworks.github.com/yard-bird/doc
 bugs: http://github.com/rubyworks/yard-bird/issues
+code: http://github.com/rubyworks/yard-bird
 mail: http://groups.google.com/group/rubyworks-mailinglist
