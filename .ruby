@@ -7,7 +7,7 @@ authors:
 copyrights:
 - holder: Rubyworks
   year: '2011'
-  license: BSD-2-Clause
+  license: MIT
 replacements: []
 alternatives: []
 requirements:
@@ -36,9 +36,9 @@ revision: 0
 created: '2011-05-14'
 summary: Documentation Your Way!
 title: YARD Bird
+version: 0.1.1
 name: yard-bird
 description: Yardbird is a YARD plugin that allows you, the developer, to customize
   your documentation parsing system.
 organization: Rubyworks
-version: ''
 date: '2011-11-09'
