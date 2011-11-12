@@ -1,6 +1,6 @@
 ---
 source:
-- profile
+- var
 authors:
 - name: Trans
   email: transfire@gmail.com
@@ -38,7 +38,7 @@ load_path:
 revision: 0
 created: '2011-05-14'
 summary: Documentation Your Way!
-title: YARD Bird
+title: Yardbird
 version: 0.1.2
 name: yard-bird
 description: ! 'Yardbird is a YARD plugin that allows you, the developer, to write
@@ -46,8 +46,8 @@ description: ! 'Yardbird is a YARD plugin that allows you, the developer, to wri
 
   Your Way. Do you like TomDoc, but wish it were just a tad bit different? You can
 
-  fix that. Have some raddical idea for using ASCII table in your docs? You can do
+  fix that. Have some radical idea for using ASCII table in your docs? You can do
 
   that too.'
 organization: Rubyworks
-date: '2011-11-09'
+date: '2011-11-11'

@@ -18,12 +18,11 @@ yard:
   active: true
 
 dnote:
-  title: Developer's Notes
-  output: NOTES.rdoc
+  title: Source Notes
+  output: log/notes.html
 
 vclog:
   output:
-    - log/Changes.rdoc
-    - log/History.rdoc
-  active: false
+    - log/changes.html
+    - log/history.html
 
